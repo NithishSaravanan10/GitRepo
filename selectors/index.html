@@ -1,0 +1,62 @@
+<!-- select the element by using id -->
+
+<div id="header">Page Header</div>
+
+<script>
+    var headerElement = document.getElementById("header");
+    console.log(headerElement.textContent); // Output: Page Header
+</script>
+
+
+<!-- select the element by using class  -->
+<p class="highlight">This is highlighted text.</p>
+<p class="highlight">Another highlighted text.</p>
+
+<script>
+    var highlights = document.getElementsByClassName("highlight");
+    for (var i = 0; i < highlights.length; i++) {
+        console.log(highlights[i].textContent);
+    }
+    
+</script>
+
+<!-- select the element by using tagname -->
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+
+<script>
+    var paragraphs = document.getElementsByTagName("p");
+    for (var i = 0; i < paragraphs.length; i++) {
+        console.log(paragraphs[i].textContent);
+    }
+    // Output:
+    // Paragraph 1
+    // Paragraph 2
+</script>
+
+
+
+<!-- select the element by query selector -->
+<p>First paragraph</p>
+<p>Second paragraph</p>
+
+<script>
+    var firstParagraph = document.querySelector("p");
+    console.log(firstParagraph.textContent); // Output: First paragraph
+</script>
+
+
+<!-- queryselector for all -->
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+
+<script>
+    var allParagraphs = document.querySelectorAll("p");
+    allParagraphs.forEach(function (paragraph) {
+        console.log(paragraph.textContent);
+    });
+    // Output:
+    // Paragraph 1
+    // Paragraph 2
+</script>
+

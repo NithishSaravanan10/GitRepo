@@ -1,0 +1,34 @@
+<table>
+    <thead>
+        <tr>
+            <th>EMP ID</th>
+            <th>EMP NAME</th>
+            <th>DESIGNATION</th>
+            <th>DATE OF JOINING</th>
+            <th>ADDRESS</th>
+            @if(toggleButton == false){
+                <th>Salary</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let detail of details">
+            <td>{{detail.empid}}</td>
+            <td>{{detail.empName}}</td>
+            <td>{{detail.designation}}</td>
+            <td>{{detail.dateOfJoining}}</td>
+            <td>{{detail.address}}</td>
+            @if(toggleButton == false){
+                <td>{{detail.salary}}</td>
+            }
+        </tr>
+    </tbody>
+</table>
+<button (click) = "ShowHideButtonClick()">
+    @if(toggleButton == false){
+        Hide
+    }
+    @else{
+        Show
+    }
+</button>
